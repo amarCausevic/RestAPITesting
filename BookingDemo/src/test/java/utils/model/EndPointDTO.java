@@ -1,4 +1,4 @@
-package org.booking.utils.model;
+package utils.model;
 
 import lombok.Getter;
 import lombok.Setter;

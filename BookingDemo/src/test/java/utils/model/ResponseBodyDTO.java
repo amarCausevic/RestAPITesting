@@ -1,4 +1,4 @@
-package org.booking.utils.model;
+package utils.model;
 
 import io.restassured.http.Method;
 import io.restassured.specification.RequestSpecification;

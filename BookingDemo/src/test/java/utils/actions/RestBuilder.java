@@ -1,4 +1,4 @@
-package org.booking.utils.actions;
+package utils.actions;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -6,9 +6,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.booking.utils.enums.StatusCode;
-import org.booking.utils.model.EndPointDTO;
-import org.booking.utils.model.RequestBodyDTO;
+import utils.enums.StatusCode;
+import utils.model.EndPointDTO;
+import utils.model.RequestBodyDTO;
 
 public class RestBuilder extends RestAssured {
 

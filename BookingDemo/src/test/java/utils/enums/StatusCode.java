@@ -1,4 +1,4 @@
-package org.booking.utils.enums;
+package utils.enums;
 
 public enum StatusCode {
   OK(200),
@@ -16,5 +16,4 @@ public enum StatusCode {
   public int value() {
     return this.val;
   }
-
 }
