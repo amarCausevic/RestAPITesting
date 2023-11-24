@@ -7,13 +7,13 @@ public enum StatusCode {
   RESOURCE(404),
   INTERNAL_SERVER_ERROR(500);
 
-  public final int val;
+  private final int val;
 
   private StatusCode(int value) {
     this.val = value;
   }
 
-  public int value() {
+  public int val() {
     return this.val;
   }
 }

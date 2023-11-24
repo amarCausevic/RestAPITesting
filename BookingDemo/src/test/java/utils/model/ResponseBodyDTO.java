@@ -1,7 +1,6 @@
 package utils.model;
 
 import io.restassured.http.Method;
-import io.restassured.specification.RequestSpecification;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,12 @@ import lombok.Setter;
 public class ResponseBodyDTO {
 
   private Method method;
-  private String uri;
+  private String endPoint;
   private int statusCode;
-  private RequestSpecification requestBody;
+
+  public ResponseBodyDTO(Method method, String endPoint, int statusCode) {
+    this.method = method;
+    this.endPoint = endPoint;
+    this.statusCode = statusCode;
+  }
 }
