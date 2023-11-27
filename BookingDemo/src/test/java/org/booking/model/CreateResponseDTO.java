@@ -1,7 +1,6 @@
 package org.booking.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,10 +10,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookingDatesDTO {
+public class CreateResponseDTO {
 
-  @JsonProperty("checkin")
-  private LocalDate checkIn;
-  @JsonProperty("checkout")
-  private LocalDate checkOut;
+  @JsonProperty("bookingid")
+  private int bookingId;
+  @JsonProperty("booking")
+  private BookingDetailDTO booking;
 }
