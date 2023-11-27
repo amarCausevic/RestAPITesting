@@ -33,7 +33,7 @@ public class LoginDAO extends RestBuilderDAO {
   }
 
   public static Response login(String username, String password) {
-    return responseApi(requestPayload(username, password), responsePayload());
+    return responseApi(requestPayload(username, password), responsePayload(), true);
   }
 
   public static LoginResponseDTO getResponse(Response response) {
