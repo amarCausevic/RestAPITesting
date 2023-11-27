@@ -26,7 +26,7 @@ public class CreateSpec extends CreateDAO {
 
   @Then("validate correct values are added to database")
   public static void validateResponseData() {
-    
+    validateCorrectBookingWasCreated(createResponseDTO);
   }
 
   @And("validate create status code {int}")

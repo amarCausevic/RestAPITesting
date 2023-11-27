@@ -1,17 +1,21 @@
 package org.booking.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
+import java.util.List;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class BookingsDTO {
 
-  @JsonProperty("bookingid")
-  private String bookingId;
+  @JsonProperty
+  private List<BookingsResponseDTO> bookingIds;
+
+
+  @JsonCreator
+  public BookingsDTO(List<BookingsResponseDTO> id) {
+    this.bookingIds = id;
+  }
 }

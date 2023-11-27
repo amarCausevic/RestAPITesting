@@ -5,6 +5,7 @@ import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import java.time.LocalDate;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.booking.enums.Base;
@@ -34,7 +35,7 @@ public class CreateDAO extends BookingsDAO {
   }
 
   //This should be passed from Create.feature file!!!!
-  private static BookingDetailDTO payload() {
+  public static BookingDetailDTO payload() {
     return new BookingDetailDTO(
         "Test",
         "CreateEndPoint",
@@ -54,7 +55,7 @@ public class CreateDAO extends BookingsDAO {
   }
 
   public static Response createBooking() {
-    return responseApi(requestPayload(), responsePayload());
+    return responseApi(requestPayload(), responsePayload(), true);
   }
 
   public static CreateResponseDTO getCreateResponse(Response response) {
@@ -72,6 +73,29 @@ public class CreateDAO extends BookingsDAO {
     } catch (AssertionError exception) {
       logger.error("With with adding Booking to the DB");
       throw new AssertionError("Booking was not added to the DB");
+    }
+  }
+
+  //TODO: This will need optimizing in sense: Iterate over object properties and check if values are valid!
+  public static void validateCorrectBookingWasCreated(CreateResponseDTO createResponseDTO) {
+    try {
+      if (ObjectUtils.isNotEmpty(createResponseDTO)) {
+        BookingDetailDTO bookingDetailDTO = createResponseDTO.getBooking();
+        BookingDatesDTO bookingDatesDTO = createResponseDTO.getBooking().getBookingDates();
+
+        Assert.assertEquals(payload().getFirstName(), bookingDetailDTO.getFirstName());
+        Assert.assertEquals(payload().getLastname(), bookingDetailDTO.getLastname());
+        Assert.assertEquals(payload().getTotalPrice(), bookingDetailDTO.getTotalPrice());
+        Assert.assertEquals(payload().getDepositPaid(), bookingDetailDTO.getDepositPaid());
+        Assert.assertEquals(payload().getBookingDates().getCheckIn(), bookingDatesDTO.getCheckIn());
+        Assert.assertEquals(payload().getBookingDates().getCheckOut(),
+            bookingDatesDTO.getCheckOut());
+        Assert.assertEquals(payload().getAdditionalNeeds(), bookingDetailDTO.getAdditionalNeeds());
+        logger.info("Correct data was inserted into DB");
+      }
+    } catch (AssertionError assertionError) {
+      logger.error("Please check the sent payload, values are not correct");
+      throw new RuntimeException(assertionError);
     }
   }
 }
