@@ -14,7 +14,6 @@ import org.booking.model.BookingDetailDTO;
 import org.booking.model.BookingsDTO;
 import org.booking.model.CreateResponseDTO;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -28,7 +27,7 @@ public class BookingsSpec extends BookingsDAO {
   private static final Logger logger = LogManager.getLogger(BookingsSpec.class);
 
 
-  @Before
+  //TODO: Implement BEFORE annotation of cucumber!
   public static void testPrerequisites() {
     Response createResponse = CreateDAO.createBooking();
     createResponseDTO = CreateDAO.getCreateResponse(createResponse);

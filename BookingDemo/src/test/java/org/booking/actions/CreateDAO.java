@@ -34,7 +34,7 @@ public class CreateDAO extends BookingsDAO {
     return new BookingDatesDTO(checkIn, checkOut);
   }
 
-  //This should be passed from Create.feature file!!!!
+  //This should be passed from CreateBooking.feature file!!!!
   public static BookingDetailDTO payload() {
     return new BookingDetailDTO(
         "Test",
