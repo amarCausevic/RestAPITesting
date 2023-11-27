@@ -1,0 +1,5 @@
+2023-11-27 08:56:53,225 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:2676
+2023-11-27 08:57:35,601 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:3038
+2023-11-27 09:00:54,146 ERROR o.b.a.CreateDAO [main] java.lang.AssertionError
+2023-11-27 09:03:16,301 ERROR o.b.a.CreateDAO [main] java.lang.AssertionError
+2023-11-27 09:03:29,991 ERROR o.b.a.CreateDAO [main] With with adding Booking to the DB
