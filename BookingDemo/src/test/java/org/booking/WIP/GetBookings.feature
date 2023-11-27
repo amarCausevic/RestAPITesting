@@ -4,10 +4,10 @@ Feature: Validating CORRECT endpoint responses GET booking and booking/id
     Given user sends a request to the endpoint
     When endpoint is reached, all bookings will be retried
     Then validate response object contains bookingid property
-    And validate status code 200
+    And validate GET status code 200
 
   Scenario: As user I want to retrieve a specific booking
     Given user sends a request to the endpoint for a specific booking
     When endpoint is reached,specific booking will be retried
     Then validate response object contains booking detail object
-    And validate status code 200
+    And validate GET status code 200

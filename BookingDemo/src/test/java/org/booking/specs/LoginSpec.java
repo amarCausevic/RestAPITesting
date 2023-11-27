@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 public class LoginSpec extends LoginDAO {
-  
+
   private static LoginResponseDTO responseDTO = new LoginResponseDTO();
   private static Response response;
 

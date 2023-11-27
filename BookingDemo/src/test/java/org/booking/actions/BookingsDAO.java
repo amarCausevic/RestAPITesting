@@ -45,12 +45,12 @@ public class BookingsDAO extends RestBuilderDAO {
   public static BookingsDTO getResponse(Response response) {
     JsonPath body = extractResponseAsJSON(response);
 
-    return body.getObject("", BookingsDTO.class);
+    return body.getObject(emptyString, BookingsDTO.class);
   }
 
   public static BookingDetailDTO getDetailResponse(Response response) {
     JsonPath body = extractResponseAsJSON(response);
 
-    return body.getObject("", BookingDetailDTO.class);
+    return body.getObject(emptyString, BookingDetailDTO.class);
   }
 }

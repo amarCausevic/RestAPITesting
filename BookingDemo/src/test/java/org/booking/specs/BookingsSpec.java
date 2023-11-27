@@ -20,13 +20,11 @@ public class BookingsSpec extends BookingsDAO {
    * after that you will need to asset that correct values are
    * fetched from api!!!!*/
   private static BookingsDTO responseDTO = new BookingsDTO();
-  private static BookingDetailDTO responseDetailDTO = new BookingDetailDTO();
-  private static Response response;
-  private static Response responseDetail;
+  private static BookingDetailDTO responseDetailDTO;
 
   @Given("user sends a request to the endpoint")
   public static BookingsDTO getAllBookings() {
-    response = getBookings();
+    Response response = getBookings();
     responseDTO = getResponse(response);
 
     return responseDTO;
@@ -44,7 +42,7 @@ public class BookingsSpec extends BookingsDAO {
 
   @Given("user sends a request to the endpoint for a specific booking")
   public static BookingDetailDTO getBookingDetails() {
-    responseDetail = getBooking(responseDTO.getBookingId());
+    Response responseDetail = getBooking(responseDTO.getBookingId());
     responseDetailDTO = getDetailResponse(responseDetail);
 
     return responseDetailDTO;
@@ -60,8 +58,9 @@ public class BookingsSpec extends BookingsDAO {
     Assert.assertNotNull(responseDetailDTO.getLastname());
   }
 
-  @And("validate status code {int}")
-  public static void validateStatusCode() {
-
+  @And("validate GET status code {int}")
+  public static void validateEndStatusCode(int defaultStatusCode) {
+    //Change this get value from response!
+    Assert.assertEquals(defaultStatusCode, 200);
   }
 }

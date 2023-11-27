@@ -55,4 +55,10 @@ public class RestBuilderDAO extends RestAssured {
   public static Object emptyObject() {
     return new Object();
   }
+
+  public static Object mapResponseToDTO(Response response) {
+    JsonPath body = extractResponseAsJSON(response);
+
+    return body.getObject("", Object.class);
+  }
 }

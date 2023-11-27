@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/java/org/booking/features",
-    glue = "org/booking/specs")
+    glue = "org/booking/specs"
+    /*tags = "createBooking"*/)
 public class TestRunner {
 
 }
