@@ -76,3 +76,13 @@
 2023-11-27 13:23:24,873 INFO o.b.s.BookingsSpec [main] Retrieving booking details ID: {"firstname":"Test","lastname":"CreateEndPoint","totalprice":15000,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2018-01-01"},"additionalneeds":"No Additional Needs"}
 2023-11-27 13:23:24,888 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
 2023-11-27 13:23:24,890 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-27 13:32:00,510 INFO o.b.s.BookingsSpec [main] Before hook is executed
+2023-11-27 13:32:00,512 INFO o.b.s.BookingsSpec [main] New Booking Created, ID: 4984
+2023-11-27 13:32:00,512 INFO o.b.a.BookingsDAO [main] This is ID in getBooking method: 4984
+2023-11-27 13:32:01,387 INFO o.b.s.BookingsSpec [main] Retrieving booking details ID: {"firstname":"Test","lastname":"CreateEndPoint","totalprice":15000,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2018-01-01"},"additionalneeds":"No Additional Needs"}
+2023-11-27 13:32:01,403 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
+2023-11-27 13:32:01,404 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-27 13:37:08,758 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-27 13:37:16,928 INFO o.b.a.BookingsDAO [main] This is ID in getBooking method: 2453
+2023-11-27 13:37:17,700 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
+2023-11-27 13:37:17,701 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200

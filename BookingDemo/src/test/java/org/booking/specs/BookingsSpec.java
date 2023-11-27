@@ -20,13 +20,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 public class BookingsSpec extends BookingsDAO {
 
-  /*
-   * You will need to create a new booking
-   * after that you will need to asset that correct values are
-   * fetched from api!!!!*/
   private static BookingsDTO responseDTO;
   private static BookingDetailDTO responseDetailDTO;
-  private static Response createResponse;
   private static Response getAllBookings;
   private static Response getOneBooking;
   private static CreateResponseDTO createResponseDTO;
@@ -35,15 +30,13 @@ public class BookingsSpec extends BookingsDAO {
 
   @Before
   public static void testPrerequisites() {
-    createResponse = CreateDAO.createBooking();
+    Response createResponse = CreateDAO.createBooking();
     createResponseDTO = CreateDAO.getCreateResponse(createResponse);
-    logger.info("Before hook is executed");
   }
 
   @Given("user sends a request to the endpoint")
   public static void getAllBookings() {
     getAllBookings = getBookings();
-
     responseDTO = getResponse(getAllBookings);
   }
 
@@ -65,11 +58,7 @@ public class BookingsSpec extends BookingsDAO {
   @Given("user sends a request to the endpoint for a specific booking")
   public static void getBookingDetails() {
     testPrerequisites();
-    logger.info("New Booking Created, ID: {}", createResponseDTO.getBookingId());
-
     getOneBooking = getBooking(String.valueOf(createResponseDTO.getBookingId()));
-    logger.info("Retrieving booking details ID: {}",
-        getOneBooking.then().extract().body().asString());
     responseDetailDTO = getDetailResponse(getOneBooking);
   }
 
