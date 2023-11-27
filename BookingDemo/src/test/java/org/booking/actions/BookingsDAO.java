@@ -32,8 +32,9 @@ public class BookingsDAO extends RestBuilderDAO {
 
   public static RequestBodyDTO requestPayload(String id) {
     pathParam.put("id", id);
+    HashMap<String, String> pathParams = id.isEmpty() ? emptyHashMap() : pathParam;
 
-    return new RequestBodyDTO(baseURI, emptyHashMap(), emptyHashMap(), pathParam,
+    return new RequestBodyDTO(baseURI, emptyHashMap(), emptyHashMap(), pathParams,
         emptyHashMap(), ContentType.JSON, emptyObject());
   }
 
@@ -48,7 +49,6 @@ public class BookingsDAO extends RestBuilderDAO {
   }
 
   public static Response getBooking(String id) {
-    logger.info("This is ID in getBooking method: {}", id);
     return responseApi(requestPayload(id), responsePayload(true), false);
   }
 
