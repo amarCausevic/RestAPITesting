@@ -5,12 +5,14 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import java.time.LocalDate;
 import java.util.HashMap;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.booking.enums.Base;
 import org.booking.enums.EndPoint;
 import org.booking.model.BookingDatesDTO;
 import org.booking.model.BookingDetailDTO;
+import org.junit.Assert;
 import utils.actions.RestBuilderDAO;
 import utils.enums.StatusCode;
 import utils.model.BaseUtil;
@@ -24,6 +26,7 @@ public class UpdateDAO extends RestBuilderDAO {
   private static final String singleBookingEndPoint = EndPoint.SINGLE_BOOKING.val();
   private static final int statusOK = StatusCode.OK.val();
   private static final HashMap<String, String> pathParam = new HashMap<>();
+  private static final HashMap<String, String> headers = new HashMap<>();
   private static final Logger logger = LogManager.getLogger(BookingsDAO.class);
 
 
@@ -45,19 +48,43 @@ public class UpdateDAO extends RestBuilderDAO {
         "User needs to pay additional fees to Automation");
   }
 
-  public static RequestBodyDTO requestPayload(String id) {
+  public static RequestBodyDTO requestPayload(String id, String token) {
     pathParam.put("id", id);
-    HashMap<String, String> pathParams = id.isEmpty() ? emptyHashMap() : pathParam;
+    headers.put("Cookie", "token=" + token);
 
-    return new RequestBodyDTO(baseURI, emptyHashMap(), emptyHashMap(), pathParams,
-        emptyHashMap(), ContentType.JSON, updatePayload());
+    return new RequestBodyDTO(baseURI, emptyHashMap(), emptyHashMap(), pathParam,
+        headers, ContentType.JSON, updatePayload());
   }
 
   public static ResponseBodyDTO responsePayload() {
-    return new ResponseBodyDTO(Method.POST, singleBookingEndPoint, statusOK);
+    return new ResponseBodyDTO(Method.PUT, singleBookingEndPoint, statusOK);
   }
 
-  public static Response updateBooking(String id) {
-    return responseApi(requestPayload(id), responsePayload(), true);
+  public static Response updateBooking(String id, String token) {
+    return responseApi(requestPayload(id, token), responsePayload(), true);
+  }
+
+  //TODO: This will need optimizing in sense: Iterate over object properties and check if values are valid!
+  public static void validateCorrectBookingWasUpdated(BookingDetailDTO bookingDetailDTO) {
+    try {
+      if (ObjectUtils.isNotEmpty(bookingDetailDTO)) {
+        BookingDatesDTO bookingDatesDTO = bookingDetailDTO.getBookingDates();
+
+        Assert.assertEquals(updatePayload().getFirstName(), bookingDetailDTO.getFirstName());
+        Assert.assertEquals(updatePayload().getLastname(), bookingDetailDTO.getLastname());
+        Assert.assertEquals(updatePayload().getTotalPrice(), bookingDetailDTO.getTotalPrice());
+        Assert.assertEquals(updatePayload().getDepositPaid(), bookingDetailDTO.getDepositPaid());
+        Assert.assertEquals(updatePayload().getBookingDates().getCheckIn(),
+            bookingDatesDTO.getCheckIn());
+        Assert.assertEquals(updatePayload().getBookingDates().getCheckOut(),
+            bookingDatesDTO.getCheckOut());
+        Assert.assertEquals(updatePayload().getAdditionalNeeds(),
+            bookingDetailDTO.getAdditionalNeeds());
+        logger.info("Correct data was inserted into DB");
+      }
+    } catch (AssertionError assertionError) {
+      logger.error("Please check the sent payload, values are not correct");
+      throw new RuntimeException(assertionError);
+    }
   }
 }
