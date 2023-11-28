@@ -86,3 +86,27 @@
 2023-11-27 13:37:16,928 INFO o.b.a.BookingsDAO [main] This is ID in getBooking method: 2453
 2023-11-27 13:37:17,700 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
 2023-11-27 13:37:17,701 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-28 10:51:00,230 INFO o.b.s.UpdateSpec [main] This is login token: b0ca403a10523ac
+2023-11-28 10:51:00,231 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 4687
+2023-11-28 11:36:46,571 INFO o.b.s.UpdateSpec [main] This is login token: a67cf59b1cf15b4
+2023-11-28 11:36:46,572 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 2374
+2023-11-28 11:36:53,852 INFO o.b.s.UpdateSpec [main] This is login token: 39a1faead6ac7a9
+2023-11-28 11:36:53,853 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 2438
+2023-11-28 11:39:59,511 INFO o.b.s.UpdateSpec [main] This is login token: 0fe7b9ed699d946
+2023-11-28 11:39:59,512 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 4016
+2023-11-28 11:41:57,291 INFO o.b.s.UpdateSpec [main] This is login token: 1113ab4de2bcf52
+2023-11-28 11:41:57,292 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 5032
+2023-11-28 11:41:58,578 INFO o.b.s.UpdateSpec [main] Response of UPDATE: io.restassured.internal.RestAssuredResponseImpl@53dd42d6
+2023-11-28 11:42:31,242 INFO o.b.s.UpdateSpec [main] This is login token: f7e6d5c289d9659
+2023-11-28 11:42:31,243 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 103
+2023-11-28 11:42:31,904 INFO o.b.s.UpdateSpec [main] Response of UPDATE: Forbidden
+2023-11-28 11:48:16,015 INFO o.b.s.UpdateSpec [main] This is login token: e3a119a31208d5e
+2023-11-28 11:48:16,016 INFO o.b.s.UpdateSpec [main] This is id of newly created booking: 3040
+2023-11-28 11:48:16,016 INFO o.b.a.BookingsDAO [main] This is pathParms: 3040
+2023-11-28 11:48:16,016 INFO o.b.a.BookingsDAO [main] This is headers: token=e3a119a31208d5e
+2023-11-28 11:48:16,734 INFO o.b.s.UpdateSpec [main] Response of UPDATE: {"firstname":"TestUpdated","lastname":"EndPointUpdatedTheTest","totalprice":9000,"depositpaid":false,"bookingdates":{"checkin":"2022-10-17","checkout":"2023-10-18"},"additionalneeds":"User needs to pay additional fees to Automation"}
+2023-11-28 11:48:16,743 INFO o.b.s.UpdateSpec [main] Updated name: EndPointUpdatedTheTest
+2023-11-28 12:06:52,997 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
+2023-11-28 12:06:53,002 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-28 12:08:15,216 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
+2023-11-28 12:08:15,218 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
