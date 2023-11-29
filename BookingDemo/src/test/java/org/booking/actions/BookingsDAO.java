@@ -10,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.booking.enums.Base;
 import org.booking.enums.EndPoint;
-import org.booking.model.BookingDatesDTO;
 import org.booking.model.BookingDetailDTO;
 import org.booking.model.BookingsDTO;
 import org.junit.Assert;
@@ -64,22 +63,14 @@ public class BookingsDAO extends RestBuilderDAO {
     return body.getObject(emptyString, BookingDetailDTO.class);
   }
 
-  //TODO: This will need optimizing in sense: Iterate over object properties and check if values are valid!
-  public static void validateRetrievedBookingDetails(BookingDetailDTO bookingDetailDTO) {
-    try {
-      if (ObjectUtils.isNotEmpty(bookingDetailDTO)) {
-        BookingDetailDTO payload = CreateDAO.payload();
-        BookingDatesDTO bookingDatesDTO = bookingDetailDTO.getBookingDates();
+  public static void validateRetrievedBookingDetails(BookingDetailDTO responseBody) {
+    assertBooking(CreateDAO.payload(), responseBody);
+  }
 
-        Assert.assertEquals(payload.getFirstName(), bookingDetailDTO.getFirstName());
-        Assert.assertEquals(payload.getLastname(), bookingDetailDTO.getLastname());
-        Assert.assertEquals(payload.getTotalPrice(), bookingDetailDTO.getTotalPrice());
-        Assert.assertEquals(payload.getDepositPaid(), bookingDetailDTO.getDepositPaid());
-        Assert.assertEquals(payload.getBookingDates().getCheckIn(), bookingDatesDTO.getCheckIn());
-        Assert.assertEquals(payload.getBookingDates().getCheckOut(),
-            bookingDatesDTO.getCheckOut());
-        Assert.assertEquals(payload.getAdditionalNeeds(), bookingDetailDTO.getAdditionalNeeds());
-        logger.info("Correct data was inserted into DB");
+  public static void assertBooking(BookingDetailDTO expected, BookingDetailDTO actual) {
+    try {
+      if (ObjectUtils.isNotEmpty(expected) && ObjectUtils.isNotEmpty(actual)) {
+        Assert.assertTrue(expected.equals(actual));
       }
     } catch (AssertionError assertionError) {
       logger.error("Please check the sent payload, values are not correct");

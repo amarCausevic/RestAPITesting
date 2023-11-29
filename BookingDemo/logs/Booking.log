@@ -110,3 +110,99 @@
 2023-11-28 12:06:53,002 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
 2023-11-28 12:08:15,216 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
 2023-11-28 12:08:15,218 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 11:07:26,716 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 11:08:53,980 INFO o.b.a.BookingsDAO [main] This is expected result EndPointUpdatedTheTest
+2023-11-29 11:08:53,981 INFO o.b.a.BookingsDAO [main] This is actual result EndPointUpdatedTheTest
+2023-11-29 11:08:53,984 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 11:16:36,952 INFO o.b.a.BookingsDAO [main] This is expected result EndPointUpdatedTheTest
+2023-11-29 11:16:36,955 INFO o.b.a.BookingsDAO [main] This is actual result EndPointUpdatedTheTest
+2023-11-29 11:16:36,959 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 11:35:33,417 INFO o.b.a.BookingsDAO [main] This is expected result EndPointUpdatedTheTest
+2023-11-29 11:35:33,419 INFO o.b.a.BookingsDAO [main] This is actual result EndPointUpdatedTheTest
+2023-11-29 11:35:33,472 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 11:46:39,597 INFO o.b.a.BookingsDAO [main] This is expected result EndPointUpdatedTheTest
+2023-11-29 11:46:39,598 INFO o.b.a.BookingsDAO [main] This is actual result EndPointUpdatedTheTest
+2023-11-29 11:46:39,608 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 11:47:27,027 INFO o.b.a.BookingsDAO [main] This is expected result [private java.lang.String org.booking.model.BookingDetailDTO.firstName, private java.lang.String org.booking.model.BookingDetailDTO.lastname, private int org.booking.model.BookingDetailDTO.totalPrice, private java.lang.Boolean org.booking.model.BookingDetailDTO.depositPaid, private org.booking.model.BookingDatesDTO org.booking.model.BookingDetailDTO.bookingDates, private java.lang.String org.booking.model.BookingDetailDTO.additionalNeeds]
+2023-11-29 11:47:27,031 INFO o.b.a.BookingsDAO [main] This is actual result [private java.lang.String org.booking.model.BookingDetailDTO.firstName, private java.lang.String org.booking.model.BookingDetailDTO.lastname, private int org.booking.model.BookingDetailDTO.totalPrice, private java.lang.Boolean org.booking.model.BookingDetailDTO.depositPaid, private org.booking.model.BookingDatesDTO org.booking.model.BookingDetailDTO.bookingDates, private java.lang.String org.booking.model.BookingDetailDTO.additionalNeeds]
+2023-11-29 11:47:27,043 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 11:52:26,351 INFO o.b.a.BookingsDAO [main] This is expected result org.booking.model.BookingDetailDTO@3d3c886f
+2023-11-29 11:52:26,354 INFO o.b.a.BookingsDAO [main] This is actual result org.booking.model.BookingDetailDTO@6d5f4900
+2023-11-29 11:52:26,410 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:20:12,065 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:20:29,234 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:20:35,607 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:21:56,047 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:24:34,144 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:24:34,147 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:26:05,088 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:26:05,092 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:28:16,570 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:28:16,573 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:28:52,261 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:28:52,263 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:32:31,997 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:32:31,999 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:33:03,138 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:33:03,141 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:33:25,888 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:33:25,891 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:33:52,566 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:33:52,569 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:34:13,355 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:34:13,357 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:34:34,569 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:34:34,572 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:35:43,479 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:35:43,481 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:37:59,873 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:37:59,876 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:39:07,940 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:39:07,943 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:39:52,477 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:39:52,479 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:41:34,458 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:41:34,460 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:42:04,707 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:42:04,709 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:42:26,684 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:42:26,690 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:42:56,110 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:42:56,111 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:43:20,773 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:43:20,775 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:43:45,089 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:43:45,091 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:44:28,450 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:44:28,453 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:45:00,284 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:45:00,286 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:45:21,713 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:45:21,714 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:45:31,975 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:45:31,978 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:46:00,128 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:46:00,130 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:49:00,816 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:49:00,818 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:50:07,703 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:50:07,705 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:51:13,009 INFO o.b.a.BookingsDAO [main] This is boolean false
+2023-11-29 12:51:13,011 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:51:33,422 INFO o.b.a.BookingsDAO [main] This is boolean true
+2023-11-29 12:51:33,425 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:52:13,229 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:52:40,393 ERROR o.b.a.BookingsDAO [main] Please check the sent payload, values are not correct
+2023-11-29 12:52:59,288 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:55:21,978 ERROR o.b.a.BookingsDAO [main] This is result: true
+2023-11-29 12:55:21,981 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 12:55:55,334 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:11:50,747 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:4365
+2023-11-29 13:11:50,750 INFO o.b.a.CreateDAO [main] Correct data was inserted into DB
+2023-11-29 13:11:50,753 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:12:00,536 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:12:03,313 INFO o.b.a.BookingsDAO [main] Correct data was inserted into DB
+2023-11-29 13:12:03,314 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:12:17,639 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:12:19,638 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-29 13:12:30,690 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
