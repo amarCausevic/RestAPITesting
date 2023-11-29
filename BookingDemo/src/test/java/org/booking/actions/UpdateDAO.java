@@ -5,14 +5,12 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import java.time.LocalDate;
 import java.util.HashMap;
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.booking.enums.Base;
 import org.booking.enums.EndPoint;
 import org.booking.model.BookingDatesDTO;
 import org.booking.model.BookingDetailDTO;
-import org.junit.Assert;
 import utils.actions.RestBuilderDAO;
 import utils.enums.StatusCode;
 import utils.model.BaseUtil;
@@ -33,6 +31,13 @@ public class UpdateDAO extends RestBuilderDAO {
   private static BookingDatesDTO updateDatePayload() {
     LocalDate checkIn = LocalDate.of(2022, 10, 17);
     LocalDate checkOut = LocalDate.of(2023, 10, 18);
+
+    return new BookingDatesDTO(checkIn, checkOut);
+  }
+
+  private static BookingDatesDTO cmar() {
+    LocalDate checkIn = LocalDate.of(1999, 10, 17);
+    LocalDate checkOut = LocalDate.of(2005, 10, 18);
 
     return new BookingDatesDTO(checkIn, checkOut);
   }
@@ -64,27 +69,7 @@ public class UpdateDAO extends RestBuilderDAO {
     return responseApi(requestPayload(id, token), responsePayload(), true);
   }
 
-  //TODO: This will need optimizing in sense: Iterate over object properties and check if values are valid!
-  public static void validateCorrectBookingWasUpdated(BookingDetailDTO bookingDetailDTO) {
-    try {
-      if (ObjectUtils.isNotEmpty(bookingDetailDTO)) {
-        BookingDatesDTO bookingDatesDTO = bookingDetailDTO.getBookingDates();
-
-        Assert.assertEquals(updatePayload().getFirstName(), bookingDetailDTO.getFirstName());
-        Assert.assertEquals(updatePayload().getLastname(), bookingDetailDTO.getLastname());
-        Assert.assertEquals(updatePayload().getTotalPrice(), bookingDetailDTO.getTotalPrice());
-        Assert.assertEquals(updatePayload().getDepositPaid(), bookingDetailDTO.getDepositPaid());
-        Assert.assertEquals(updatePayload().getBookingDates().getCheckIn(),
-            bookingDatesDTO.getCheckIn());
-        Assert.assertEquals(updatePayload().getBookingDates().getCheckOut(),
-            bookingDatesDTO.getCheckOut());
-        Assert.assertEquals(updatePayload().getAdditionalNeeds(),
-            bookingDetailDTO.getAdditionalNeeds());
-        logger.info("Correct data was inserted into DB");
-      }
-    } catch (AssertionError assertionError) {
-      logger.error("Please check the sent payload, values are not correct");
-      throw new RuntimeException(assertionError);
-    }
+  public static void validateBookingResponseBody(BookingDetailDTO responseBody) {
+    BookingsDAO.assertBooking(updatePayload(), responseBody);
   }
 }

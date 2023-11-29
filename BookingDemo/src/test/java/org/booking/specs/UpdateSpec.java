@@ -47,7 +47,7 @@ public class UpdateSpec extends UpdateDAO {
 
   @Then("validate response object contains new data")
   public static void validateResponseObjectWasUpdated() {
-    validateCorrectBookingWasUpdated(bookingDetailDTO);
+    validateBookingResponseBody(bookingDetailDTO);
   }
 
   @And("validate PUT ALL booking status code {int}")

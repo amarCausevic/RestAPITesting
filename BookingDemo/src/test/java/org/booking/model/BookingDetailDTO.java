@@ -1,6 +1,7 @@
 package org.booking.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,4 +26,18 @@ public class BookingDetailDTO {
   private BookingDatesDTO bookingDates;
   @JsonProperty("additionalneeds")
   private String additionalNeeds;
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj == null || this.getClass() != obj.getClass()) {
+      return false;
+    }
+
+    return Objects.equals(((BookingDetailDTO) obj).getFirstName(), this.firstName)
+        && Objects.equals(((BookingDetailDTO) obj).getLastname(), this.lastname)
+        && Objects.equals(((BookingDetailDTO) obj).getTotalPrice(), this.totalPrice)
+        && Objects.equals(((BookingDetailDTO) obj).getDepositPaid(), this.depositPaid)
+        && ((BookingDetailDTO) obj).getBookingDates().equals(this.getBookingDates())
+        && Objects.equals(((BookingDetailDTO) obj).getAdditionalNeeds(), this.additionalNeeds);
+  }
 }
