@@ -206,3 +206,14 @@
 2023-11-29 13:12:17,639 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
 2023-11-29 13:12:19,638 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
 2023-11-29 13:12:30,690 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 11:01:11,569 INFO o.b.a.DeleteDAO [main] This is response body: Created
+2023-11-30 11:22:59,504 INFO o.b.a.DeleteDAO [main] This is response body: Created
+2023-11-30 11:23:13,176 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 11:23:13,194 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 11:23:13,201 INFO i.r.RestAssured [main] Validation of response status was FAILED! Status code was: 201
+2023-11-30 11:25:44,778 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-11-30 11:25:44,800 INFO i.r.RestAssured [main] Validation of response status was FAILED! Status code was: 404
+2023-11-30 11:26:26,852 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-11-30 11:26:26,868 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 11:27:35,142 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-11-30 11:27:35,158 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201

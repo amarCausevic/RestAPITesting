@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
 import io.restassured.response.Response;
 import org.booking.actions.BookingsDAO;
 import org.booking.actions.CreateDAO;
@@ -14,7 +15,9 @@ import org.booking.model.BookingDetailDTO;
 import org.booking.model.CreateResponseDTO;
 import org.booking.model.LoginResponseDTO;
 import org.junit.Assert;
+import org.junit.runner.RunWith;
 
+@RunWith(Cucumber.class)
 public class UpdateSpec extends UpdateDAO {
 
   private static CreateResponseDTO createResponseDTO;
@@ -22,6 +25,7 @@ public class UpdateSpec extends UpdateDAO {
   private static BookingDetailDTO bookingDetailDTO;
   private static Response updateRequest;
 
+  //TODO: This is the same as in DELETE SPEC!!!!
   @Before()
   public static void testPrerequisites() {
     Response loginResponse = LoginDAO.login("admin", "password123");
