@@ -62,3 +62,13 @@ public class TestRunner {
 > plugin = {"pretty", "html:target/html-reports"} -> This will execute and create and HTML report into src/target folder
 
 > stepNotifications = true -> This will trigger that notification and spec steps are displayed in the runner
+
+## TODO
+- Implement better loggin
+- Implement refactoring for @Before hook
+- Implement CI/CD if you see its nesseccery
+- Implement better structure to use interface in some cases
+- Check all TODOs and resolve the potential issue
+- Create a scheduled pipeline where tests are executed daily
+- Check if only one feature file is better to have reather then multiple since all cases can be coverd in on feature file
+
