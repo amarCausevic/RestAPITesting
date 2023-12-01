@@ -217,3 +217,18 @@
 2023-11-30 11:26:26,868 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
 2023-11-30 11:27:35,142 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
 2023-11-30 11:27:35,158 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 15:50:42,489 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:4337
+2023-11-30 15:50:42,494 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:50:46,697 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-11-30 15:50:46,698 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 15:50:50,385 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:53:45,093 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:792
+2023-11-30 15:53:45,098 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:53:49,181 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-11-30 15:53:49,183 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-11-30 15:53:52,549 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:53:56,472 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:53:59,792 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:54:03,063 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 15:54:06,418 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-11-30 16:05:37,318 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
