@@ -69,7 +69,7 @@ public class TestRunner {
 > stepNotifications = true -> This will trigger that notification and spec steps are displayed in the runner
 
 ## TODO
-- Implement better loggin
+- Implement better logging
 - Implement refactoring for @Before hook
 - Implement CI/CD if you see its nesseccery
 - Implement better structure to use interface in some cases
