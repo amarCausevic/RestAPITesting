@@ -1,4 +1,9 @@
 # RestAPITesting
+![image](https://github.com/amarCausevic/RestAPITesting/assets/37142287/9d875b8e-fa55-462c-b234-597d6ad8cfe7)
+
+![image](https://github.com/amarCausevic/RestAPITesting/assets/37142287/7d5f13ed-12b2-48e6-bd1d-e1e1125a9d4e)
+
+![image](https://github.com/amarCausevic/RestAPITesting/assets/37142287/1ebdf581-ab0a-44fb-ba0e-f78674dd96b7)
 
 ## For whom?
 This reposatory was created for getting basic concept of Rest API testing with RestAssured and Cucumber/Gherkin Syntax frameworks in Java. 
