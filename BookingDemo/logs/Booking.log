@@ -232,3 +232,35 @@
 2023-11-30 15:54:03,063 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
 2023-11-30 15:54:06,418 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
 2023-11-30 16:05:37,318 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:20,045 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:3780
+2023-12-01 08:49:20,052 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:24,004 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-12-01 08:49:24,006 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-12-01 08:49:27,532 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:32,184 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:35,517 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:38,817 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 08:49:42,599 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:00:22,991 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:4344
+2023-12-01 09:00:22,997 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:00:27,050 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-12-01 09:00:27,052 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-12-01 09:00:30,553 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:04:44,616 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:6603
+2023-12-01 09:04:44,622 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:04:48,634 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-12-01 09:04:48,637 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-12-01 09:04:52,361 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:04:56,413 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:04:59,762 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:05:03,096 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:05:06,399 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:09:55,868 INFO o.b.a.CreateDAO [main] Booking was added to the DB as booking id:866
+2023-12-01 09:09:55,873 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:09:59,859 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 404
+2023-12-01 09:09:59,861 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 201
+2023-12-01 09:10:03,200 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:10:07,249 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:10:10,551 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:10:13,934 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
+2023-12-01 09:10:17,233 INFO i.r.RestAssured [main] Validation of response status was SUCCESS! Status code was: 200
