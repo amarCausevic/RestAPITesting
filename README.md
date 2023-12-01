@@ -60,4 +60,5 @@ public class TestRunner {
 }
 ```
 > plugin = {"pretty", "html:target/html-reports"} -> This will execute and create and HTML report into src/target folder
+
 > stepNotifications = true -> This will trigger that notification and spec steps are displayed in the runner
